@@ -7,7 +7,12 @@
       <v-card-text>
         <v-form>
           <v-text-field prepend-icon="mdi-account-circle" label="ユーザ名" />
-          <v-text-field v-bind:type="showPassword ? 'text' : 'password'" prepend-icon="mdi-lock" v-bind:append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'" label="パスワード"  @click:append="showPassword = !showPassword" />
+          <v-text-field
+            v-bind:type="showPassword ? 'text' : 'password'"
+            prepend-icon="mdi-lock"
+            v-bind:append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
+            label="パスワード"  @click:append="showPassword = !showPassword" />
+          <v-checkbox v-model="showPassword" label="パスワードを表示する"/>
           <v-card-action>
             <v-btn class="info">ログイン</v-btn>
           </v-card-action>
